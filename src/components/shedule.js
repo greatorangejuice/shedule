@@ -3,11 +3,11 @@ import React from "react";
 class Shedule extends React.Component {
     render() {
         return (
-            <div>
+            <div className="main-page_table">
                 { this.props.group &&
                     <div>
                      <p>Номер группы:  {this.props.group} </p>
-                     <p>Учебная неделя: {this.props.week} </p>
+                     <p> Сейчас {this.props.week} учебная неделя </p>
                      <p>Сегодня: {this.props.todayDate} </p>
                      <p>Расписание: {this.props.shedules} </p>
                     </div>

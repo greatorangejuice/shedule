@@ -19,24 +19,20 @@ class App extends React.Component {
     const group = e.target.elements.group.value;
 
     if(group) {
-      
     const api_url = await 
     fetch(`https://journal.bsuir.by/api/v1/studentGroup/schedule?studentGroup=${group}`)
     const data = await api_url.json();
     console.log(data);
 
-    
     this.setState({
       group: data.studentGroup.name,
       week: data.currentWeekNumber,
       todayDate: data.todayDate,
-      shedules: data.todaySchedules,
+      shedules: data.tomorrowSchedules,
       error: ''
     });
   } 
   }
-
- 
 
   render() {
     return (
