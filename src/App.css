@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+  a {
+      text-decoration: none;
+  }
+
+  a:hover {
+      border-bottom: 1px solid #000000;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .link-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .link-button:hover,
+  .link-button:focus {
+  text-decoration: none;
+  }
+
+  .header-page {
+      display: flex;
+      padding: 10px;
+  }
+
+  .header-page_logo {
+      font-weight: bold; 
+  }
+
+  .header-page_logo2 {
+    font-weight: 500;
+  }
+
+  .header-page_menu {
+      margin-left: auto;
+  }
+
+  .main-page {
+  background-color: #00FA9A
+  
+  }
+  .main-page_table {
+   background-color: #E0FFFF
+    }
+
+
+    

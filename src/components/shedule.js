@@ -6,10 +6,10 @@ class Shedule extends React.Component {
             <div className="main-page_table">
                 { this.props.group &&
                     <div>
-                     <p>Номер группы:  {this.props.group} </p>
+                     <p>Номер группы: {this.props.group} </p>
                      <p> Сейчас {this.props.week} учебная неделя </p>
                      <p>Сегодня: {this.props.todayDate} </p>
-                     <p>Расписание: {this.props.shedules} </p>
+                     <p>Расписание: {this.props.examSchedules} </p>
                     </div>
                 }
             </div>

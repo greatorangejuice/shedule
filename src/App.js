@@ -1,5 +1,5 @@
 import React from 'react';
-import Info from "./components/Info";
+import Header from './components/header'
 import Form from "./components/form";
 import Shedule from './components/shedule';
 
@@ -11,6 +11,7 @@ class App extends React.Component {
     shedule: undefined,
     todayDate: undefined,
     shedules: undefined,
+    examSchedules: [],
     error: undefined
   }
 
@@ -23,12 +24,15 @@ class App extends React.Component {
     fetch(`https://journal.bsuir.by/api/v1/studentGroup/schedule?studentGroup=${group}`)
     const data = await api_url.json();
     console.log(data);
+    let day = data.examSchedules.length;
+    console.log(day);
+    console.log(data.examSchedules)
 
     this.setState({
       group: data.studentGroup.name,
       week: data.currentWeekNumber,
       todayDate: data.todayDate,
-      shedules: data.tomorrowSchedules,
+      exam: data.examSchedules,
       error: ''
     });
   } 
@@ -36,8 +40,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Info />
+      <div className = "main-page">
+        <Header />
         <Form getSheduleMethod={this.getShedule}/>
         <Shedule
         group = {this.state.group}
@@ -45,6 +49,7 @@ class App extends React.Component {
         todayDate = {this.state.todayDate}
         tomorrowDate = {this.state.tomorrowDate}
         error = {this.state.error}
+        exam = {this.state.examSchedules}
         />
       </div>
     );
