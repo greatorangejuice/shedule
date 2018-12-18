@@ -1,9 +1,8 @@
 import React from "react";
-
 class Shedule extends React.Component {
     render() {
         return (
-            <div className="main-page_table">
+            <div className="shedule-page">
                 { this.props.group &&
                     <div>
                      <p>Номер группы: {this.props.group} </p>

@@ -24,8 +24,6 @@ class App extends React.Component {
     fetch(`https://journal.bsuir.by/api/v1/studentGroup/schedule?studentGroup=${group}`)
     const data = await api_url.json();
     console.log(data);
-    let day = data.examSchedules.length;
-    console.log(day);
     console.log(data.examSchedules)
 
     this.setState({
@@ -40,7 +38,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className = "main-page">
+      <div>
         <Header />
         <Form getSheduleMethod={this.getShedule}/>
         <Shedule
